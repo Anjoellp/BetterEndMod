@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"values": [
+		"betterend:azulium_helmet",
+		"betterend:azulium_chestplate",
+		"betterend:azulium_leggings",
+		"betterend:azulium_boots",
+		"betterend:azulium_pickaxe",
+		"betterend:azulium_axe",
+		"betterend:azulium_shovel",
+		"betterend:azulium_hoe",
+		"betterend:azulium_sword"
+	]
+}

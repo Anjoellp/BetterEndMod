@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXXXX",
+    "X   X", 
+	"X Y X", 
+    "X   X", 
+	"XXXXX"
+  ],
+  "key": {
+    "X": {
+      "item": "betterend:endwood_planks"
+    },
+    "Y": {
+       "item": "betterend:azulium_ingot"
+    }
+  },
+  "result": {
+    "item": "minecraft:dirt", 
+	"count": 64
+  }
+}

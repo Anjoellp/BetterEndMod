@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"BBB",
+		" # ",
+		"###"
+	],
+	"key": {
+		"B": {
+			"item": "betterend:azulium_block"
+		},
+		"#": {
+			"item": "betterend:azulium_ingot"
+		}
+	},
+	"result": {
+		"item": "betterend:azulium_anvil"
+	}
+}

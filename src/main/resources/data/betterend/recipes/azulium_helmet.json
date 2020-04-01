@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"# #"
+	],
+	"key": {
+		"#": {
+			"item": "betterend:azulium_ingot"
+		}
+	},
+	"result": {
+		"item": "betterend:azulium_helmet"
+	}
+}

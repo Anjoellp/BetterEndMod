@@ -1,0 +1,24 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"RER",
+		"OTO"
+	],
+	"key": {
+		"R": {
+			"item": "betterend:ruby"
+		},
+		"E": {
+			"item": "betterend:elytrium_ingot"
+		},
+		"T": {
+			"item": "minecraft:enchanting_table"
+		},
+		"O": {
+			"item": "minecraft:obsidian"
+		}
+	},
+	"result": {
+		"item": "betterend:disenchanting_table"
+	}
+}

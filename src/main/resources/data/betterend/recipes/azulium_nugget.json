@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "betterend:azulium_ingot"
+		}
+	],
+	"result": {
+		"item": "betterend:azulium_nugget",
+		"count": 9
+	}
+}

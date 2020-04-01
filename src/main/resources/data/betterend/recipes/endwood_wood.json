@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "betterend:endwood_log"
+    }
+  },
+  "result": {
+    "item": "betterend:endwood_wood",
+    "count": 3
+  }
+}

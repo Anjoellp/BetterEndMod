@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "betterend:block/ender_crafting_table_side",
+		"down": "betterend:block/endwood_log",
+		"up": "betterend:block/ender_crafting_table_top",
+		"north": "betterend:block/ender_crafting_table_side",
+		"east": "betterend:block/ender_crafting_table_side",
+		"south": "betterend:block/ender_crafting_table_side",
+		"west": "betterend:block/ender_crafting_table_side"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EEE",
+		"EDE",
+		"ERE"
+	],
+	"key": {
+		"E": {
+			"item": "betterend:elytrium_dust"
+		},
+		"R": {
+			"item": "betterend:ruby"
+		},
+		"D": {
+			"item": "betterend:dragon_ingot"
+		}
+	},
+	"result": {
+		"item": "betterend:elytrium_ingot",
+		"count": 2
+	}
+}

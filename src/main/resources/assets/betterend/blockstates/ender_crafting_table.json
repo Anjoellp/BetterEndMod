@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "betterend:block/ender_crafting_table" }
+    }
+}

@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"# #",
+		"# #"
+	],
+	"key": {
+		"#": {
+			"item": "betterend:ruby"
+		}
+	},
+	"result": {
+		"item": "betterend:ruby_boots"
+	}
+}

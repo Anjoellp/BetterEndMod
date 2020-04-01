@@ -1,0 +1,8 @@
+{
+	"type": "betterend:purple_blasting",
+	"ingredient": {
+		"item": "betterend:azulium_ore"
+	},
+	"result": "betterend:azulium_ingot",
+	"experience": 2
+}

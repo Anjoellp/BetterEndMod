@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"DED",
+		"EIE",
+		"DED"
+	],
+	"key": {
+		"D": {
+			"item": "minecraft:dragon_breath"
+		},
+		"E": {
+			"item": "betterend:enchantment_essence"
+		},
+		"I": {
+			"item": "betterend:elytrium_ingot"
+		}
+	},
+	"result": {
+		"item": "betterend:fly_abillity_essence"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"#",
+		"S",
+		"S"
+	],
+	"key": {
+		"#": {
+			"item": "betterend:endstone_brick"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "betterend:endstone_shovel"
+	}
+}

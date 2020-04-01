@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "betterend:block/stripped_endwood_log",
+    "side": "betterend:block/stripped_endwood_log"
+  }
+}
