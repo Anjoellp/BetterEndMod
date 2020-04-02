@@ -62,5 +62,7 @@
 	"block.betterend.end_grass": "End Grass",
 	"block.betterend.ender_parsnips": "Ender Parsnips",
 	"item.betterend.ender_parsnip": "Ender Parsnip",
-	"item.betterend.ender_parsnip_soup":"Ender Parsnip Soup"
+	"item.betterend.ender_parsnip_soup": "Ender Parsnip Soup",
+	"item.betterend.endwood_boat": "Endwood Boat",
+	"item.betterend.flying_endwood_boat": "Flying Endwood Boat"
 }

@@ -17,7 +17,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.BlockNamedItem;
-import net.minecraft.item.BoatItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.IItemTier;
@@ -97,6 +96,7 @@ public class ModItems {
 	public static Item ENDER_PARSNIP;
 	public static Item ENDER_PARSNIP_SOUP;
 	public static Item ENDWOOD_BOAT;
+	public static Item FLYING_ENDWOOD_BOAT;
 
 	public static void registerItems(IForgeRegistry<Item> registry) {
 		registry.register(ENDWOOD_SAPLING = registerBlockItem(ModBlocks.ENDWOOD_SAPLING, "endwood_sapling",
@@ -128,8 +128,10 @@ public class ModItems {
 				ItemGroup.BUILDING_BLOCKS));
 		registry.register(ENDWOOD_DOOR = registerItem(p -> new TallBlockItem(ModBlocks.ENDWOOD_DOOR, p), "endwood_door",
 				ItemGroup.REDSTONE));
-		registry.register(ENDWOOD_BOAT = registerItem(p -> new BoatItem(ModBoatTypes.ENDWOOD, p), "endwood_boat",
-				ItemGroup.TRANSPORTATION));
+		registry.register(ENDWOOD_BOAT = registerItem(p -> new EndwoodBoatItem(ModBoatTypes.ENDWOOD, false, p),
+				"endwood_boat", ItemGroup.TRANSPORTATION));
+		registry.register(FLYING_ENDWOOD_BOAT = registerItem(p -> new EndwoodBoatItem(ModBoatTypes.ENDWOOD, true, p),
+				"flying_endwood_boat", ItemGroup.TRANSPORTATION));
 		registry.register(STRIPPED_ENDWOOD_LOG = registerBlockItem(ModBlocks.STRIPPED_ENDWOOD_LOG,
 				"stripped_endwood_log", ItemGroup.BUILDING_BLOCKS));
 		registry.register(STRIPPED_ENDWOOD_WOOD = registerBlockItem(ModBlocks.STRIPPED_ENDWOOD_WOOD,

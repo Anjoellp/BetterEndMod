@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import org.ajdp.betterend.biomes.ModBiomes;
@@ -52,9 +51,7 @@ import net.minecraft.entity.item.BoatEntity;
 import net.minecraft.entity.merchant.villager.VillagerTrades;
 import net.minecraft.entity.merchant.villager.VillagerTrades.ITrade;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.inventory.container.RepairContainer;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.Item;
@@ -69,14 +66,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.state.IProperty;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
-import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -91,13 +84,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.EntityMountEvent;
 import net.minecraftforge.event.entity.player.AnvilRepairEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.BlockEvent.FarmlandTrampleEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -116,14 +109,14 @@ public class BetterEndMod {
 	public static final List<Supplier<Block>> PURPLE_FIRE_BLOCKS = new ArrayList<>(
 			ImmutableList.of(() -> Blocks.END_STONE, () -> ModBlocks.END_GRASS));
 
-	public static final Consumer<? extends Throwable> DEFAULT_ERROR = t -> {
-		throw new RuntimeException(t);
-	};
-
 	public BetterEndMod() {
+		LOGGER.info("hello setup");
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+		LOGGER.info("client hello");
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+		LOGGER.info("client finished");
 		MinecraftForge.EVENT_BUS.register(this);
+		LOGGER.info("register finished");
 	}
 
 	@SuppressWarnings("unchecked")
@@ -211,6 +204,16 @@ public class BetterEndMod {
 
 	@Mod.EventBusSubscriber
 	public static class GameEvents {
+		private static BlockState currentRightClick;
+		private static World world;
+		private static BlockPos currentRightClickPos;
+
+		@SubscribeEvent
+		public static void blockRightClick(PlayerInteractEvent.RightClickBlock event) {
+			currentRightClick = event.getWorld().getBlockState(event.getPos());
+			world = event.getWorld();
+			currentRightClickPos = event.getPos();
+		}
 
 		@SubscribeEvent
 		public static void onLeftClick(PlayerInteractEvent.LeftClickBlock event) {
@@ -248,7 +251,8 @@ public class BetterEndMod {
 			if (!(player.isCreative() || player.isSpectator())) {
 				boolean flag = true;
 				for (ItemStack slot : player.inventory.armorInventory) {
-					if (!slot.isEnchanted() || slot == ItemStack.EMPTY) {
+					if (!slot.isEnchanted() || slot == ItemStack.EMPTY
+							|| slot.getDamage() / slot.getMaxDamage() >= 0.9) {
 						flag = false;
 						break;
 					}
@@ -296,21 +300,24 @@ public class BetterEndMod {
 
 		@SubscribeEvent
 		public static void anvilRepair(AnvilRepairEvent event) {
-			PlayerEntity player = event.getPlayer();
-			World world = player.world;
-			RayTraceResult result = Minecraft.getInstance().objectMouseOver;
-			if (result.getType() == Type.BLOCK) {
-				BlockPos pos = ((BlockRayTraceResult) result).getPos();
-				BlockState state = world.getBlockState(pos);
-				if (state.getBlock() == Blocks.ANVIL) {
-					onAnvilRepair(event, pos, state, world);
-				} else if (state.getBlock() == ModBlocks.AZULIUM_ANVIL) {
-					onAzuliumAnvilRepair(event, pos, state, world);
-				}
-			} else {
-				System.err.println("anvil not found!");
+//			PlayerEntity player = event.getPlayer();
+//			World world = player.world;
+//			RayTraceResult result = Minecraft.getInstance().objectMouseOver;
+//			if (result.getType() == Type.BLOCK) {
+//				BlockPos pos = ((BlockRayTraceResult) result).getPos();
+//				BlockState state = world.getBlockState(pos);
+//				if (state.getBlock() == Blocks.ANVIL) {
+//					onAnvilRepair(event, pos, state, world);
+//				} else if (state.getBlock() == ModBlocks.AZULIUM_ANVIL) {
+//					onAzuliumAnvilRepair(event, pos, state, world);
+//				}
+//			} else {
+//				System.err.println("anvil not found!");
+//			}
+//
+			if (currentRightClick != null && currentRightClick.getBlock() == ModBlocks.AZULIUM_ANVIL) {
+				onAzuliumAnvilRepair(event, currentRightClickPos, currentRightClick, world);
 			}
-
 		}
 
 		public static void onAnvilRepair(AnvilRepairEvent event, BlockPos pos, BlockState state, World world) {
@@ -333,35 +340,18 @@ public class BetterEndMod {
 				if (newState.isValidPosition(world, pos)) {
 					world.setBlockState(pos, newState);
 					world.playSound(player, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
-					player.swingArm(event.getHand());
+					if (event.getSide() == LogicalSide.CLIENT)
+						player.swingArm(event.getHand());
 				}
 			}
 		}
 
-		public static Container getOpenContainer() {
-			return Minecraft.getInstance() != null
-					? Minecraft.getInstance().player != null ? Minecraft.getInstance().player.openContainer : null
-					: null;
-		}
-
-		public static boolean isActiveBlockAnAzuliumAnvil() {
-			Container cont = getOpenContainer();
-			if (cont != null && cont instanceof RepairContainer) {
-				RepairContainer r = (RepairContainer) cont;
-				System.out.println(r.field_216980_g == IWorldPosCallable.DUMMY);
-				if (r.field_216980_g != null) {
-					r.field_216980_g.apply((world, pos) -> {
-						if (world.getBlockState(pos) == null)
-							System.out.println("no blockstate");
-						else
-							System.out.println(world.getBlockState(pos).getBlock().getRegistryName());
-						return null;
-					});
-				}
-				return false;
-			}
-			return false;
-		}
+//		@OnlyIn(Dist.CLIENT)
+//		public static Container getOpenContainer() {
+//			return Minecraft.getInstance() != null
+//					? Minecraft.getInstance().player != null ? Minecraft.getInstance().player.openContainer : null
+//					: null;
+//		}
 
 		public static boolean isAzuliumAnvil(World world, BlockPos pos) {
 			BlockState state = world.getBlockState(pos);
@@ -396,15 +386,16 @@ public class BetterEndMod {
 				event.setMaterialCost(newLevel);
 				event.setCost(2 * (e.isTreasureEnchantment() ? 2 : 1) * newLevel);
 			}
-			RayTraceResult result = Minecraft.getInstance().objectMouseOver;
-			if (result.getType() == Type.BLOCK) {
-				World world = Minecraft.getInstance().world;
-				BlockPos pos = ((BlockRayTraceResult) result).getPos();
-				BlockState state = world.getBlockState(pos);
-				if (state.getBlock() == ModBlocks.AZULIUM_ANVIL) {
-					onAzuliumAnvilUpdate(event, world, pos, state);
-				}
-			}
+//			RayTraceResult result = Minecraft.getInstance().objectMouseOver;
+//			if (result.getType() == Type.BLOCK) {
+//				World world = Minecraft.getInstance().world;
+//				BlockPos pos = ((BlockRayTraceResult) result).getPos();
+//				BlockState state = world.getBlockState(pos);
+//				if (state.getBlock() == ModBlocks.AZULIUM_ANVIL) {
+//					onAzuliumAnvilUpdate(event, world, pos, state);
+//				}
+//			}
+
 		}
 
 		public static void onAzuliumAnvilUpdate(AnvilUpdateEvent event, World world, BlockPos pos, BlockState state) {
@@ -431,16 +422,6 @@ public class BetterEndMod {
 		public static void farmlandTrample(FarmlandTrampleEvent event) {
 			if (event.getWorld().getBlockState(event.getPos()).getBlock() == ModBlocks.END_FARMLAND)
 				event.setCanceled(true);
-		}
-
-		@SubscribeEvent
-		public static void onEntityAdd(EntityJoinWorldEvent event) {
-			if (event.getEntity() instanceof BoatEntity) {
-				BoatEntity boat = (BoatEntity) event.getEntity();
-				if (boat.getBoatType() == ModBoatTypes.ENDWOOD) {
-					boat.getDataManager().set(Entity.NO_GRAVITY, true);
-				}
-			}
 		}
 
 		private static Vec3d newPos;
@@ -528,16 +509,4 @@ public class BetterEndMod {
 		return PURPLE_FIRE_BLOCKS.stream().anyMatch(e -> e.get() == block);
 	}
 
-	@SuppressWarnings("unchecked")
-	public static <T extends Throwable> void tryCatch(Runnable test, Consumer<T> error) {
-		try {
-			test.run();
-		} catch (Exception t) {
-			tryCatch(() -> error.accept((T) t));
-		}
-	}
-
-	public static void tryCatch(Runnable test) {
-		tryCatch(test, DEFAULT_ERROR);
-	}
 }
