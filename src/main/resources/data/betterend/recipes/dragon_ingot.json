@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"BBB",
+		"AIA",
+		"BBB"
+	],
+	"key": {
+		"B": {
+			"item": "minecraft:dragon_breath"
+		},
+		"A": {
+			"item": "betterend:azulium_ingot"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		}
+	},
+	"result": {
+		"item": "betterend:dragon_ingot"
+	}
+}

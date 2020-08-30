@@ -1,0 +1,61 @@
+{
+	"type": "minecraft:entity",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:alternatives",
+					"children": [
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:match_tool",
+									"predicate": {
+										"item": "betterend:essence_sword"
+									}
+								},
+								{
+									"condition": "minecraft:random_chance_with_looting",
+									"chance": 0.5,
+									"looting_multiplier": 0.1
+								}
+							],
+							"functions": [
+								{
+									"function": "minecraft:set_damage",
+									"damage": {
+										"min": 0,
+										"max": 0.7
+									}
+								}
+							],
+							"name": "betterend:magic_artefact"
+						},
+						{
+							"type": "minecraft:item",
+							"conditions": [
+								{
+									"condition": "minecraft:random_chance_with_looting",
+									"chance": 0.25,
+									"looting_multiplier": 0.05
+								}
+							],
+							"functions": [
+								{
+									"function": "minecraft:set_damage",
+									"damage": {
+										"min": 0.2,
+										"max": 0.9
+									}
+								}
+							],
+							"name": "betterend:magic_artefact"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#X#",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "betterend:endwood_planks"
+		},
+		"X": {
+			"tag": "betterend:flying_items"
+		}
+	},
+	"result": {
+		"item": "betterend:flying_endwood_boat"
+	}
+}

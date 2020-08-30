@@ -1,0 +1,38 @@
+{
+	"entity.druide.ambient": {
+		"sounds": [
+			{
+				"name": "betterend:entity/druide/ambient1",
+				"volume": 0.5
+			},
+			{
+				"name": "betterend:entity/druide/ambient2",
+				"volume": 0.5
+			}
+		]
+	},
+	"entity.druide.attack": {
+		"sounds": [
+			{
+				"name": "betterend:entity/druide/attack",
+				"volume": 0.5
+			}
+		]
+	},
+	"entity.druide.death": {
+		"sounds": [
+			{
+				"name": "betterend:entity/druide/death",
+				"volume": 0.5
+			}
+		]
+	},
+	"entity.druide.damage": {
+		"sounds": [
+			{
+				"name": "betterend:entity/druide/damage",
+				"volume": 0.5
+			}
+		]
+	}
+}

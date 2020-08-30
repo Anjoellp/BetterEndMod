@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "betterend:block/ender_parsnips_stage2"
+    }
+}

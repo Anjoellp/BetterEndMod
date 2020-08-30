@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "minecraft:netherite_axe"
+	},
+	"addition": {
+		"item": "betterend:dark_ruby_ingot"
+	},
+	"result": {
+		"item": "betterend:ruby_axe"
+	}
+}

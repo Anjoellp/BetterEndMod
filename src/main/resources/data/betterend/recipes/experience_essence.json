@@ -1,0 +1,15 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"item": "minecraft:experience_bottle"
+	},
+	"ingredient2": {
+		"item": "minecraft:experience_bottle"
+	},
+	"essence": {
+		"item": "minecraft:prismarine_crystals"
+	},
+	"result": {
+		"item": "betterend:experience_essence"
+	}
+}

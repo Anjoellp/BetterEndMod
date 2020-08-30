@@ -1,0 +1,16 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"item": "betterend:experience_essence"
+	},
+	"ingredient2": {
+		"item": "air"
+	},
+	"essence": {
+		"type": "betterend:enchantment-essence",
+		"enchantment": "minecraft:unbreaking"
+	},
+	"enchanted-essence-result": {
+		"enchantment": "minecraft:mending"
+	}
+}

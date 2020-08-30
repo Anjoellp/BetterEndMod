@@ -1,0 +1,9 @@
+{
+  "type": "betterend:purple_blasting",
+  "ingredient": {
+    "item": "betterend:bolitium_ore"
+  },
+  "result": "betterend:bolitium",
+  "experience": 0.15,
+  "cookingtime": 200
+}

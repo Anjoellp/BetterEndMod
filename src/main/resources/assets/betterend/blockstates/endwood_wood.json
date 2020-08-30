@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "betterend:block/endwood_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "betterend:block/endwood_wood"
+    },
+    "axis=z": {
+      "model": "betterend:block/endwood_wood",
+      "x": 90
+    }
+  }
+}

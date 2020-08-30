@@ -1,0 +1,19 @@
+{
+	"type": "crafting_shaped",
+	"pattern": [
+		"#",
+		"#",
+		"S"
+	],
+	"key": {
+		"#": {
+			"item": "betterend:enchantment_essence"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "betterend:essence_sword"
+	}
+}

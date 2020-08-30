@@ -1,0 +1,8 @@
+{
+	"type": "betterend:purple_blasting",
+	"ingredient": {
+		"item": "minecraft:chorus_fruit"
+	},
+	"result": "betterend:cooked_chorus_fruit",
+	"experience": 2
+}

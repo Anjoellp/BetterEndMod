@@ -1,0 +1,15 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"item": "betterend:elytrium_ingot"
+	},
+	"ingredient2": {
+		"item": "betterend:elytrium_dust"
+	},
+	"essence": {
+		"item": "minecraft:prismarine_crystals"
+	},
+	"result": {
+		"item": "betterend:elytrium_essence"
+	}
+}

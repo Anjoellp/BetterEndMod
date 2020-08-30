@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=south": {
+			"model": "betterend:block/azulium_anvil"
+		},
+		"facing=west": {
+			"model": "betterend:block/azulium_anvil",
+			"y": 90
+		},
+		"facing=north": {
+			"model": "betterend:block/azulium_anvil",
+			"y": 180
+		},
+		"facing=east": {
+			"model": "betterend:block/azulium_anvil",
+			"y": 270
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"item": "betterend:phantom_essence"
+	},
+	"ingredient2": {
+		"item": "betterend:elytrium_essence"
+	},
+	"essence": {
+		"type": "betterend:enchantment-essence",
+		"enchantment": "empty"
+	},
+	"enchanted-essence-result": {
+		"enchantment": "betterend:fly_abillity"
+	}
+}

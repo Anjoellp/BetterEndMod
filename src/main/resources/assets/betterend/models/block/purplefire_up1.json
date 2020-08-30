@@ -1,0 +1,7 @@
+{
+    "parent": "block/template_fire_up",
+    "textures": {
+        "particle": "betterend:block/purplefire_0",
+        "fire": "betterend:block/purplefire_0"
+    }
+}

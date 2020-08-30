@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"WEW",
+		"WWW"
+	],
+	"key": {
+		"W": {
+			"item": "betterend:endwood_planks"
+		},
+		"E": {
+			"type": "betterend:enchantment-essence",
+			"enchantment": "betterend:fly_abillity"
+		}
+	},
+	"result": {
+		"item": "betterend:flying_endwood_boat"
+	}
+}

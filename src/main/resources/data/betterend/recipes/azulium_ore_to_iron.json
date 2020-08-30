@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "betterend:azulium_ore"
+	},
+	"result": "minecraft:iron_ingot",
+	"experience": 0
+}

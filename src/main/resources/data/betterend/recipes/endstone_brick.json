@@ -1,0 +1,9 @@
+{
+  "type": "betterend:purple_blasting",
+  "ingredient": {
+    "item": "minecraft:end_stone"
+  },
+  "result": "betterend:endstone_brick",
+  "experience": 0.15,
+  "cookingtime": 200
+}

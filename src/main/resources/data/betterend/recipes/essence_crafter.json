@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"IEI",
+		" B "
+	],
+	"key": {
+		"I": {
+			"item": "betterend:elytrium_ingot"
+		},
+		"E": {
+			"item": "minecraft:enchanting_table"
+		},
+		"B": {
+			"item": "betterend:ruby_block"
+		}
+	},
+	"result": {
+		"item": "betterend:essence_crafter"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"item": "minecraft:phantom_membrane"
+	},
+	"ingredient2": {
+		"item": "minecraft:phantom_membrane"
+	},
+	"essence": {
+		"item": "minecraft:prismarine_crystals"
+	},
+	"result": {
+		"item": "betterend:phantom_essence"
+	}
+}

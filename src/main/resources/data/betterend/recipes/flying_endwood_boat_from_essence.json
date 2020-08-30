@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "betterend:endwood_boat"
+		},
+		{
+			"type": "betterend:enchantment-essence",
+			"enchantment": "betterend:fly_abillity"
+		}
+	],
+	"result": {
+		"item": "betterend:flying_endwood_boat"
+	}
+}

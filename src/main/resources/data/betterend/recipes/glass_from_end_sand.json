@@ -1,0 +1,8 @@
+{
+	"type": "betterend:purple_blasting",
+	"ingredient": {
+		"item": "betterend:end_sand"
+	},
+	"result": "minecraft:glass",
+	"experience": 2
+}

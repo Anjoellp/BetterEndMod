@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "moisture=0": { "model": "betterend:block/end_farmland" },
+        "moisture=1": { "model": "betterend:block/end_farmland" },
+        "moisture=2": { "model": "betterend:block/end_farmland" },
+        "moisture=3": { "model": "betterend:block/end_farmland" },
+        "moisture=4": { "model": "betterend:block/end_farmland" },
+        "moisture=5": { "model": "betterend:block/end_farmland" },
+        "moisture=6": { "model": "betterend:block/end_farmland" },
+        "moisture=7": { "model": "betterend:block/end_farmland_moist" }
+    }
+}

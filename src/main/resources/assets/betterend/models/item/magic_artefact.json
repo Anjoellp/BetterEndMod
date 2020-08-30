@@ -1,0 +1,14 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "betterend:item/magic_artefact"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"betterend:empty": 1
+			},
+			"model": "betterend:item/magic_artefact_empty"
+		}
+	]
+}

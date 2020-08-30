@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"betterend:endwood_log",
+		"betterend:endwood_wood",
+		"betterend:stripped_endwood_log",
+		"betterend:stripped_endwood_wood"
+	]
+}

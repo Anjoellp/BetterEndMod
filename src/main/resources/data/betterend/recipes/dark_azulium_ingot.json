@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+	{
+			"item": "betterend:azulium_ingot"
+		},
+		{
+			"item": "betterend:azulium_ingot"
+		},
+		{
+			"item": "minecraft:netherite_ingot"
+		}
+	],
+	"result": {
+		"item": "betterend:dark_azulium_ingot",
+		"count": 2
+	}
+}

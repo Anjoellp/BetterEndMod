@@ -1,0 +1,9 @@
+{
+  "type": "betterend:purple_blasting",
+  "ingredient": {
+    "tag": "minecraft:logs"
+  },
+  "result": "betterend:bolitium",
+  "experience": 0.15,
+  "cookingtime": 200
+}

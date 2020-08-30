@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "wooden_button",
+	"ingredients": [
+		{
+			"item": "betterend:endwood_planks"
+		}
+	],
+	"result": {
+		"item": "betterend:endwood_button"
+	}
+}

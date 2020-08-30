@@ -1,0 +1,17 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"type": "betterend:enchantment-essence",
+		"enchantment": "minecraft:unbreaking"
+	},
+	"ingredient2": {
+		"type": "betterend:enchantment-essence",
+		"enchantment": "minecraft:mending"
+	},
+	"essence": {
+		"item": "betterend:magic_essence"
+	},
+	"result": {
+		"item": "betterend:unbreakable_essence"
+	}
+}

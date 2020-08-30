@@ -1,0 +1,5 @@
+{
+	"FireColorTransformer": "META-INF/fire_color_transformer.js",
+	"BoatItemTransformer": "META-INF/boat_item_transformer.js",
+	"EndBiomeProviderReplacer":"META-INF/end_biome_provider_replacer.js"
+}

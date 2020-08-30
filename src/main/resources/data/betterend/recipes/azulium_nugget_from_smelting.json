@@ -1,0 +1,9 @@
+{
+	"type": "betterend:purple_blasting",
+	"ingredient": {
+		"tag": "betterend:azulium_smeltable"
+	},
+	"result": {
+		"item": "betterend:azulium_nugget"
+	}
+}

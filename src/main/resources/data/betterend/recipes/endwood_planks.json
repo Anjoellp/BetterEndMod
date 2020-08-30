@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "betterend:endwood_logs"
+    }
+  ],
+  "result": {
+    "item": "betterend:endwood_planks",
+    "count": 4
+  }
+}

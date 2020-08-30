@@ -1,0 +1,8 @@
+{
+	"type": "betterend:purple_blasting",
+	"ingredient": {
+		"item": "betterend:ruby_ore"
+	},
+	"result": "betterend:ruby",
+	"experience": 2
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "betterend:ender_parsnip"
+		},
+		{
+			"item": "betterend:ender_parsnip"
+		},
+		{
+			"item": "minecraft:bowl"
+		}
+	],
+	"result": {
+		"item": "betterend:ender_parsnip_soup"
+	}
+}

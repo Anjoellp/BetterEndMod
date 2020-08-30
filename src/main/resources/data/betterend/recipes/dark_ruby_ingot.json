@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:smithing",
+	"base": {
+		"item": "betterend:ruby"
+	},
+	"addition": {
+		"item": "betterend:dark_azulium_ingot"
+	},
+	"result": {
+		"item": "betterend:dark_ruby_ingot"
+	}
+}

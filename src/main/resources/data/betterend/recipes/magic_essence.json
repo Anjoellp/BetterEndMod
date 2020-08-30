@@ -1,0 +1,23 @@
+{
+	"type": "betterend:essence_crafting",
+	"ingredient1": {
+		"type": "forge:nbt",
+		"item": "betterend:magic_artefact",
+		"nbt": {
+			"Damage": 0
+		}
+	},
+	"ingredient2": {
+		"type": "forge:nbt",
+		"item": "betterend:magic_artefact",
+		"nbt": {
+			"Damage": 0
+		}
+	},
+	"essence": {
+		"item": "minecraft:prismarine_crystals"
+	},
+	"result": {
+		"item": "betterend:magic_essence"
+	}
+}

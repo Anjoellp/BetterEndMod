@@ -1,0 +1,153 @@
+{
+	"multipart": [
+		{
+			"apply": {
+				"model": "betterend:block/endwood_composter"
+			}
+		},
+		{
+			"when": {
+				"level": "1",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents1"
+			}
+		},
+		{
+			"when": {
+				"level": "1",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents1"
+			}
+		},
+		{
+			"when": {
+				"level": "2",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents2"
+			}
+		},
+		{
+			"when": {
+				"level": "2",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents2"
+			}
+		},
+		{
+			"when": {
+				"level": "3",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents3"
+			}
+		},
+		{
+			"when": {
+				"level": "3",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents3"
+			}
+		},
+		{
+			"when": {
+				"level": "4",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents4"
+			}
+		},
+		{
+			"when": {
+				"level": "4",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents4"
+			}
+		},
+		{
+			"when": {
+				"level": "5",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents5"
+			}
+		},
+		{
+			"when": {
+				"level": "5",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents5"
+			}
+		},
+		{
+			"when": {
+				"level": "6",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents6"
+			}
+		},
+		{
+			"when": {
+				"level": "6",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents6"
+			}
+		},
+		{
+			"when": {
+				"level": "7",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents7"
+			}
+		},
+		{
+			"when": {
+				"level": "7",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents7"
+			}
+		},
+		{
+			"when": {
+				"level": "8",
+				"elytrium": "true"
+			},
+			"apply": {
+				"model": "betterend:block/endwood_composter_elytrium_contents_ready"
+			}
+		},
+		{
+			"when": {
+				"level": "8",
+				"elytrium": "false"
+			},
+			"apply": {
+				"model": "minecraft:block/composter_contents_ready"
+			}
+		}
+	]
+}
