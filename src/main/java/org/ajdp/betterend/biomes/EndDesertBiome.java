@@ -18,7 +18,7 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class EndDesertBiome extends Biome {
 	public EndDesertBiome() {
-		super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, ModSurfaceBuilder.END_DESERT_CONFIG)
+		super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.DEFAULT, ModSurfaceBuilder.END_SAND_CONFIG)
 				.precipitation(Biome.RainType.NONE).category(Biome.Category.THEEND).depth(0.1F).scale(0.2F)
 				.temperature(2.0F).downfall(0.5F)
 				.func_235097_a_((new BiomeAmbience.Builder()).func_235246_b_(4159204).func_235248_c_(329011)
