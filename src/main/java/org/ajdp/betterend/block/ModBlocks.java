@@ -244,12 +244,12 @@ public class ModBlocks {
 
 	public static void registerHoeEffective(Block block) {
 		try {
-			Field field = ObfuscationReflectionHelper.findField(HoeItem.class, "field_234683_c_");
-			EnumHelper.makeAccessible(field);
-			@SuppressWarnings("unchecked")
-			ArrayList<Block> blocks = new ArrayList<>((Set<Block>) field.get(null));
-			blocks.add(block);
-			field.set(null, ImmutableSet.<Block>copyOf(blocks));
+//			Field field = ObfuscationReflectionHelper.findField(HoeItem.class, "field_150914_c");
+//			EnumHelper.makeAccessible(field);
+//			@SuppressWarnings("unchecked")
+//			ArrayList<Block> blocks = new ArrayList<>((Set<Block>) field.get(null));
+//			blocks.add(block);
+//			field.set(null, ImmutableSet.<Block>copyOf(blocks));
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
